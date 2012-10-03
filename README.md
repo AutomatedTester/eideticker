@@ -114,6 +114,7 @@ or more "clients" (machines that run the tests) and setting up the server
 * Create an nginx configuration where applicable (on Redhat-based systems,
 `/etc/nginx/conf.d`). It should look something like this:
 
+```
     server {
             listen 80; #or change this to your public IP address eg 1.1.1.1:80
             server_name eideticker;
@@ -127,7 +128,7 @@ or more "clients" (machines that run the tests) and setting up the server
                     add_header 'Access-Control-Allow-Origin' '*';
             }
     }
-
+```
 Note the Access-Control-Origin header, which allows us to integrate the SPS
 profiler to request eideticker resources directly (useful for direct linking
 to capture analysis).
